@@ -25,18 +25,18 @@ class UserManager {
     try {
       const { email, userName, password } = data;
 
-      const user = await UserModel.findOne({
-        $or: [
-          { email: email },
-          { userName: userName},
-        ],
-      });
+    //   const user = await UserModel.findOne({
+    //     $or: [
+    //       { email: email },
+    //       { username: userName},
+    //     ],
+    //   });
 
-      if (user)
-        return {
-          statusCode: 400,
-          message: "User already exists",
-        };
+    //   if (user)
+    //     return {
+    //       statusCode: 400,
+    //       message: "User already exists",
+    //     };
 
       const hashPassword = await bcrypt.hashSync(password, 10);
 

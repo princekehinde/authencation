@@ -21,7 +21,7 @@ class UserController {
         result.data
       );
     } catch (error) {
-      return errorResponse(res, 500, error.message);
+      return errorResponse(res, 500, 'Oops something went wrong');
     }
   }
 
@@ -39,7 +39,7 @@ class UserController {
         result.data
       );
     } catch (error) {
-      return errorResponse(res, 500, "Oops! Something went wrong");
+      return errorResponse(res, 500, error.message ,console.log(error));
     }
   }
 

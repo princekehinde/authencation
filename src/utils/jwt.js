@@ -12,7 +12,7 @@ class JWT {
    * @param {Object} user - The user object
    * @returns {String} - The user token
    */
-  static async generateToken(data, superAdmin = false) {
+  static async generateToken(user, superAdmin = false) {
     let payload;
 
     if (!superAdmin) {

@@ -29,12 +29,6 @@ router.get(
   userValidator.forgetPasswordForm,
   UserController.forgetPassword
 );
-
-router.put(
-  "/reset-password",
-  userValidator.resetPasswordForm,
-  UserController.resetPassword
-);
-
 module.exports = router;
+
 
